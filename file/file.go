@@ -3,7 +3,7 @@
 @Author : legend
 @File :   file.go
 */
-package file_util
+package file
 
 import (
 	"bufio"

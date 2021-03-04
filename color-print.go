@@ -3,7 +3,7 @@
 @Author : legend
 @File :   color-print.go
 */
-package utils_go
+package main
 
 import "fmt"
 

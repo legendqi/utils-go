@@ -3,7 +3,7 @@
 @Author : legend
 @File :   snowflake.go
 */
-package utils_go
+package algorithm
 
 import (
 	"errors"

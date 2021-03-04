@@ -3,7 +3,7 @@
 @Author : legend
 @File :   scrypt.go
 */
-package scrypt_utils
+package scrypt
 
 import (
 	"crypto/md5"

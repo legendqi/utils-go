@@ -1,9 +1,9 @@
 /* coding: utf-8
 @Time :   2021/3/4 下午1:56
 @Author : legend
-@File :   data-formatter.go
+@File :   data.go
 */
-package data_formatter
+package data
 
 import (
 	"encoding/json"
