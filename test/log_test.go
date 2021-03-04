@@ -6,10 +6,10 @@
 package test
 
 import (
+	"gitee.com/legendqi/utils-go/logger"
+	"gitee.com/legendqi/utils-go/scrypt"
 	"testing"
 	"time"
-	"utils-go/logger"
-	"utils-go/scrypt"
 )
 
 func TestLog(t *testing.T) {
