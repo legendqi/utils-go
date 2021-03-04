@@ -3,7 +3,7 @@
 @Author : legend
 @File :   data-formatter.go
 */
-package utils
+package data_formatter
 
 import (
 	"encoding/json"

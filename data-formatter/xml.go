@@ -3,7 +3,7 @@
 @Author : legend
 @File :   xml.go
 */
-package utils
+package data_formatter
 
 import (
 	"encoding/xml"
@@ -11,6 +11,7 @@ import (
 	"io"
 	"regexp"
 	"strings"
+	"utils-go/file-util"
 )
 
 const (
@@ -184,10 +185,10 @@ xml转map
 
 */
 func XmlToMap(xmlPath string) (map[string]interface{}, error) {
-	if !CheckFileIsExist(xmlPath) {
+	if !file_util.CheckFileIsExist(xmlPath) {
 		return nil, errors.New(xmlPath + "文件不存在")
 	}
-	xmlContent, err := ReadFile(xmlPath)
+	xmlContent, err := file_util.ReadFile(xmlPath)
 	if err != nil {
 		return nil, err
 	}

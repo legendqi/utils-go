@@ -3,7 +3,7 @@
 @Author : legend
 @File :   file.go
 */
-package utils
+package file_util
 
 import (
 	"bufio"
@@ -11,17 +11,6 @@ import (
 	"io"
 	"os"
 )
-
-func PathExists(path string) (bool, error) {
-	_, err := os.Stat(path)
-	if err == nil {
-		return true, nil
-	}
-	if os.IsNotExist(err) {
-		return false, nil
-	}
-	return false, err
-}
 
 /*
 检查文件是否存在

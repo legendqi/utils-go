@@ -3,7 +3,7 @@
 @Author : legend
 @File :   int-list.go
 */
-package utils
+package list_utils
 
 import (
 	"sort"

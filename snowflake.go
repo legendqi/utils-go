@@ -75,7 +75,6 @@ func Generate(n *Node) ID {
 				now = time.Now().UnixNano() / 1e6
 			}
 		}
-
 	} else {
 		// 本毫秒内 step 用完
 		n.step = 0
