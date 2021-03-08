@@ -9,9 +9,14 @@ import (
 	"encoding/json"
 	"errors"
 	"reflect"
+	"regexp"
 	"strconv"
+	"strings"
 )
 
+/*
+json转map
+*/
 func JsonToMap(str string) (map[string]interface{}, error) {
 	var tempMap map[string]interface{}
 	err := json.Unmarshal([]byte(str), &tempMap)
@@ -21,6 +26,9 @@ func JsonToMap(str string) (map[string]interface{}, error) {
 	return tempMap, nil
 }
 
+/*
+json转map数组
+*/
 func JsonToMaps(str string) ([]map[string]interface{}, error) {
 
 	var tempMap []map[string]interface{}
@@ -34,6 +42,9 @@ func JsonToMaps(str string) ([]map[string]interface{}, error) {
 	return tempMap, nil
 }
 
+/*
+map转json
+*/
 func MapToJson(jsonMap map[string]interface{}) (string, error) {
 	jsonStr, err := json.Marshal(jsonMap)
 	if err != nil {
@@ -42,6 +53,9 @@ func MapToJson(jsonMap map[string]interface{}) (string, error) {
 	return string(jsonStr), nil
 }
 
+/*
+struct转map
+*/
 func Struct2Map(obj interface{}) map[string]interface{} {
 	t := reflect.TypeOf(obj)
 	v := reflect.ValueOf(obj)
@@ -114,4 +128,25 @@ func ReverseString(s string) string {
 		runes[from], runes[to] = runes[to], runes[from]
 	}
 	return string(runes)
+}
+
+/*
+清除正则表达式匹配到的字符
+*/
+func ClearStringByRegex(input string, regex string) string {
+	re3, _ := regexp.Compile(regex)
+	fn := func(data string) string {
+		return ""
+	}
+	return re3.ReplaceAllStringFunc(input, fn)
+}
+
+/*
+清楚字符串中给的"\x00"，空格和换行符
+*/
+func ClearStringUnusual(input string) string {
+	input = strings.ReplaceAll(input, "\x00", "")
+	input = strings.ReplaceAll(input, " ", "")
+	input = strings.ReplaceAll(input, "\n", "")
+	return input
 }

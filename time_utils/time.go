@@ -1,9 +1,9 @@
 /* coding: utf-8
 @Time :   2021/3/4 下午2:38
 @Author : legend
-@File :   time.go
+@File :   time_utils.go
 */
-package time
+package time_utils
 
 import "time"
 
