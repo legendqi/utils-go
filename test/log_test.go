@@ -6,6 +6,8 @@
 package test
 
 import (
+	"fmt"
+	"gitee.com/legendqi/utils-go/devops/net"
 	"gitee.com/legendqi/utils-go/logger"
 	"gitee.com/legendqi/utils-go/scrypt"
 	"testing"
@@ -38,4 +40,10 @@ func TestLog(t *testing.T) {
 			break
 		}
 	}
+}
+
+func TestDevops(t *testing.T) {
+	//GetInterfacefGateway()
+	gateway, _ := net.GetInterfacefGateway("enp4s0")
+	fmt.Println(gateway)
 }

@@ -8,10 +8,10 @@ package data
 import (
 	"encoding/xml"
 	"errors"
+	"gitee.com/legendqi/utils-go/file"
 	"io"
 	"regexp"
 	"strings"
-	"utils-go/file"
 )
 
 const (

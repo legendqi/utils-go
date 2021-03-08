@@ -3,7 +3,7 @@
 @Author : legend
 @File :   shell.go
 */
-package shell_utils
+package shell
 
 import (
 	"bytes"
