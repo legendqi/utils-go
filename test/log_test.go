@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"gitee.com/legendqi/utils-go/data"
 	"gitee.com/legendqi/utils-go/logger"
+	"gitee.com/legendqi/utils-go/net"
 	"gitee.com/legendqi/utils-go/scrypt"
 	"testing"
 	"time"
@@ -46,4 +47,12 @@ func TestDevops(t *testing.T) {
 	xmlContent := "<cpuBindRootNode>\n" + "<!--><--><!--     -->" + "</cpuBindRootNode>"
 	fmt.Println(data.ClearStringByRegex(xmlContent, "(<!-->([\\s\\S]*?)<-->)*(<!--([\\s\\S]*?)-->)*"))
 	fmt.Println(data.ClearStringUnusual("adc  dgg asdf adf adf gaewt \n"))
+}
+
+func TestDown(t *testing.T) {
+	net.DownloadFile("/home/legend/Desktop/", "http://127.0.0.1:7878/NVIDIA-Linux-x86_64-455.45.01.run")
+}
+
+func TestNet(t *testing.T) {
+	fmt.Println(net.CheckServerStatus("127.0.0.1:7878"))
 }
